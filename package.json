@@ -1,0 +1,15 @@
+{
+  "name": "fizzion-typography",
+  "version": "0.0.1",
+  "description": "Typography utility classes for Fizzion",
+  "main": "_typography.scss",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "fizzion",
+    "typography"
+  ],
+  "author": "Alex Lemanski",
+  "license": "MIT"
+}
