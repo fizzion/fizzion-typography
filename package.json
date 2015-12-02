@@ -4,7 +4,7 @@
   "description": "Typography utility classes for Fizzion",
   "main": "_typography.scss",
   "scripts": {
-    "test": "./node_modules/.bin/mocha --reporter spec"
+    "test": "mocha --reporter spec"
   },
   "repository": {
     "type": "git",
