@@ -1,8 +1,9 @@
 @import 'true';
 
+@import '../typography';
+
 @include test-module('Test ') {
   @include test('$example') {
-    $example: false;
     $expect: true;
     @include assert-equal($example, $expect, 'is true');
   }
