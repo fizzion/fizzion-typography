@@ -4,7 +4,7 @@
   "description": "Typography utility classes for Fizzion",
   "main": "_typography.scss",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "mocha --reporter spec"
   },
   "repository": {
     "type": "git",
@@ -15,5 +15,10 @@
     "typography"
   ],
   "author": "Alex Lemanski",
-  "license": "MIT"
+  "license": "MIT",
+  "devDependencies": {
+    "mocha": "^2.3.4",
+    "node-sass": "^3.4.2",
+    "sass-true": "^2.0.3"
+  }
 }
