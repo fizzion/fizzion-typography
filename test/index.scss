@@ -1,6 +1,7 @@
 @import 'true';
 
 @import '../typography';
+@import 'sizing';
 
 @include test-module('Test Plumbing') {
   @include test('$example is true') {
