@@ -1,0 +1,7 @@
+$base-font-size: 16 !default;
+
+//
+@function rem($pixel-equivalent) {
+  $rem: $pixel-equivalent / $base-font-size * 1.0rem;
+  @return $rem;
+}

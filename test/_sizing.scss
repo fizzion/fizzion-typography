@@ -1,7 +1,7 @@
 @import '../lib/sizing';
 
 @include test-module('Sizing Functions') {
-  @include test('rem conversion [function]') {
+  @include test('rem conversion of unitless value [function]') {
     $test: rem(16);
     $expect: 1rem;
     @include assert-equal($test, $expect, 'returns value of 1rem');
