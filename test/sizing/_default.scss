@@ -1,4 +1,4 @@
-@import '../lib/sizing';
+@import '../../lib/sizing';
 
 @include test-module('Sizing Functions with default $base-font-size') {
   @include test('Given 16, rem conversion returns 1rem [function]') {
