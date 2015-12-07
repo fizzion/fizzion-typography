@@ -2,6 +2,7 @@
 
 @import '../typography';
 @import 'sizing/default';
+@import 'sizing/base-set';
 
 @include test-module('Test Plumbing') {
   @include test('$example is true') {

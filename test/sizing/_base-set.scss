@@ -1,0 +1,17 @@
+@import '../../lib/sizing';
+
+$base-font-size: 14;
+
+@include test-module('Sizing Functions with $base-font-size set to 14') {
+  @include test('Given 28, rem conversion returns 2rem [function]') {
+    $test: rem(28);
+    $expect: 2rem;
+    @include assert-equal($test, $expect, 'returns value of 2rem');
+  }
+
+  @include test('Given 21, rem conversion returns 1.5rem [function]') {
+    $test: rem(21);
+    $expect: 1.5rem;
+    @include assert-equal($test, $expect, 'returns value of 1.5rem');
+  }
+}
