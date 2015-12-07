@@ -1,6 +1,10 @@
 $base-font-size: 16 !default;
 
 // rem($pixel-equivalent)
+//
+// Calculate rem value when given a unitless pixel equivalent value.
+//
+// $pixel-equivalent - Pixel value passed in as a unitless value.
 @function rem($pixel-equivalent) {
   @return $pixel-equivalent / $base-font-size * 1.0rem;
 }
