@@ -11,5 +11,15 @@
         font-size: 1rem;
       }
     }
+
+    @include assert('Return `font-size: 1.4375rem`, when given 23') {
+      @include input {
+        @include font-size(23);
+      }
+
+      @include expect {
+        font-size: 1.4375rem;
+      }
+    }
   }
 }
