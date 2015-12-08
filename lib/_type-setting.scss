@@ -1,0 +1,9 @@
+@import 'sizing';
+
+// font-size($pixel-equivalent)
+//
+// Generate font-size declaration with an rem value.
+//
+// $pixel-equivalent - Pixel value passed in as a unitless value.
+@mixin font-size($pixel-equivalent) {
+}

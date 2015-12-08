@@ -1,0 +1,15 @@
+@import '../lib/type-setting';
+
+@include test-module('Type Setting') {
+  @include test('Font-size [mixin]') {
+    @include assert('Return `font-size: 1rem`, when given 16') {
+      @include input {
+        @include font-size(16);
+      }
+
+      @include expect {
+        font-size: 1rem;
+      }
+    }
+  }
+}

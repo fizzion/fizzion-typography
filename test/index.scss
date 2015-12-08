@@ -3,10 +3,4 @@
 @import '../typography';
 @import 'sizing/default';
 @import 'sizing/base-set';
-
-@include test-module('Test Plumbing') {
-  @include test('$example is true') {
-    $expect: true;
-    @include assert-equal($example, $expect, 'is true');
-  }
-}
+@import 'type-setting';
