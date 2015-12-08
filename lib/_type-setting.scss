@@ -6,4 +6,5 @@
 //
 // $pixel-equivalent - Pixel value passed in as a unitless value.
 @mixin font-size($pixel-equivalent) {
+  font-size: rem($pixel-equivalent);
 }

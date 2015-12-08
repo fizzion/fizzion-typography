@@ -2,5 +2,8 @@
 
 @import '../typography';
 @import 'sizing/default';
-@import 'sizing/base-set';
 @import 'type-setting';
+
+// With config set
+// TODO: (@bitfyre) Find a better way to organize this.
+@import 'sizing/base-set';
