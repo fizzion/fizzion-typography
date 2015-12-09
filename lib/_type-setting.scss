@@ -32,9 +32,10 @@
 //
 // Set all of he standard typography properties.
 //
-// $pixel-equivalent - Pixel value passed in as a unitless value.
+// $size - Unitless pixel value of the desired font-size.
 // $line-height - Unitless Pixel value of expected line-height.
-// $font-size - Unitless Pixel value of targeted element's font-size.
+// $weight - Value of desired font-weight. The prefered method is to use
+//           the standeard unitless integers for font-weight.
 // $tracking - Unitless integer from Photoshop's tracking field.
 @mixin type($size, $leading, $weight, $tracking: null) {
   @include font-size($size);
