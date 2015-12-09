@@ -27,3 +27,10 @@
 @mixin tracking($tracking) {
   letter-spacing: $tracking / 1000 * 1em;
 }
+
+@mixin type($size, $leading, $weight, $tracking) {
+  @include font-size($size);
+  @include leading($leading, $size);
+  font-weight: $weight;
+  @include tracking($tracking);
+}
