@@ -28,6 +28,14 @@
   letter-spacing: $tracking / 1000 * 1em;
 }
 
+// leading($tracking)
+//
+// Set all of he standard typography properties.
+//
+// $pixel-equivalent - Pixel value passed in as a unitless value.
+// $line-height - Unitless Pixel value of expected line-height.
+// $font-size - Unitless Pixel value of targeted element's font-size.
+// $tracking - Unitless integer from Photoshop's tracking field.
 @mixin type($size, $leading, $weight, $tracking: null) {
   @include font-size($size);
   @include leading($leading, $size);
