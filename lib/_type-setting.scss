@@ -19,6 +19,11 @@
   line-height: $line-height / $font-size;
 }
 
+// leading($tracking)
+//
+// Generate letter-spacing based on Photoshop's trackin value.
+//
+// $tracking - Unitless integer from Photoshop's tracking field.
 @mixin tracking($tracking) {
   letter-spacing: $tracking / 1000 * 1em;
 }
