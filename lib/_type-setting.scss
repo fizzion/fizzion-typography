@@ -28,9 +28,11 @@
   letter-spacing: $tracking / 1000 * 1em;
 }
 
-@mixin type($size, $leading, $weight, $tracking) {
+@mixin type($size, $leading, $weight, $tracking: null) {
   @include font-size($size);
   @include leading($leading, $size);
   font-weight: $weight;
-  @include tracking($tracking);
+  @if $tracking != null {
+    @include tracking($tracking);
+  }
 }

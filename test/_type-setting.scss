@@ -77,14 +77,26 @@
     @include assert('Given intergers for size, leading, nd weight, tracking' +
         'font-size, line-height, font-weight, and letter-spacing.') {
       @include input {
-        @include type(14, 16, 400, -125);
+        @include type(14, 16, 700, -125);
       }
 
       @include expect {
         font-size: 0.875rem;
         line-height: 1.14286;
-        font-weight: 400;
+        font-weight: 700;
         letter-spacing: -0.125em;
+      }
+    }
+
+    @include assert('Tracking is optional and shouldn\'t appear if 0') {
+      @include input {
+        @include type(14, 16, 700);
+      }
+
+      @include expect {
+        font-size: 0.875rem;
+        line-height: 1.14286;
+        font-weight: 700;
       }
     }
   }
