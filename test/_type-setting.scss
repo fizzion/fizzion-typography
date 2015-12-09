@@ -46,4 +46,30 @@
       }
     }
   }
+
+  @include test('Tracking [mixin]') {
+    @include assert( 'Given a positive integer, ' +
+        'return a positve floating point letter-spacing') {
+      @include input {
+        @include tracking(25)
+      }
+
+      @include expect {
+        letter-spacing: 0.025em;
+      }
+    }
+  }
+
+  @include test('Tracking [mixin]') {
+    @include assert( 'Given a negative integer, ' +
+        'return a negative floating point letter-spacing') {
+      @include input {
+        @include tracking(-125)
+      }
+
+      @include expect {
+        letter-spacing: -0.125em;
+      }
+    }
+  }
 }
