@@ -8,3 +8,7 @@
 @mixin font-size($pixel-equivalent) {
   font-size: rem($pixel-equivalent);
 }
+
+@mixin leading($line-height, $font-size) {
+  line-height: $line-height / $font-size;
+}

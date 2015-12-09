@@ -22,4 +22,28 @@
       }
     }
   }
+
+  @include test('Leading [mixin]') {
+    @include assert('Given a line height and font-size, ' +
+        'return line-height with a unitless float') {
+      @include input {
+        @include leading(21, 16);
+      }
+
+      @include expect {
+        line-height: 1.3125;
+      }
+    }
+
+    @include assert('Given a the same line height and font-size, ' +
+        'return line-height: 1;') {
+      @include input {
+        @include leading(16, 16);
+      }
+
+      @include expect {
+        line-height: 1;
+      }
+    }
+  }
 }
