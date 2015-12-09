@@ -9,6 +9,12 @@
   font-size: rem($pixel-equivalent);
 }
 
+// leading($line-height, $font-size)
+//
+// Generate line-height declaration with a unitless value.
+//
+// $line-height - Unitless Pixel value of expected line-height.
+// $font-size - Unitless Pixel value of targeted element's font-size.
 @mixin leading($line-height, $font-size) {
   line-height: $line-height / $font-size;
 }
