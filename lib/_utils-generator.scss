@@ -1,0 +1,11 @@
+$typograpy-set: (
+  centi: (item: null)
+) !default;
+
+@mixin get-type($type-map: $typography-set) {
+  @each $selector, $props in $type-map {
+    .t-#{$selector} {
+      stuff: blah;
+    }
+  }
+}

@@ -1,4 +1,22 @@
 @import '../lib/utils-generator';
 
 @include test-module('Generate typography utility classes') {
+  @include test('Generate a list of selectors and their blocks [mixin]') {
+    @include assert('Given a map with selectors as keys and a map as the ' +
+        'value, return a list of selectors [mixin]') {
+      @include input {
+        $typograpy-style: (
+          centi: (item: null)
+        );
+
+        @include get-type($typograpy-style);
+      }
+
+      @include expect {
+        .t-centi {
+          stuff: blah;
+        }
+      }
+    }
+  }
 }
