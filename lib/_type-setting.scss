@@ -1,0 +1,47 @@
+@import 'sizing';
+
+// font-size($pixel-equivalent)
+//
+// Generate font-size declaration with an rem value.
+//
+// $pixel-equivalent - Pixel value passed in as a unitless value.
+@mixin font-size($pixel-equivalent) {
+  font-size: rem($pixel-equivalent);
+}
+
+// leading($line-height, $font-size)
+//
+// Generate line-height declaration with a unitless value.
+//
+// $line-height - Unitless Pixel value of expected line-height.
+// $font-size - Unitless Pixel value of targeted element's font-size.
+@mixin leading($line-height, $font-size) {
+  line-height: $line-height / $font-size;
+}
+
+// leading($tracking)
+//
+// Generate letter-spacing based on Photoshop's trackin value.
+//
+// $tracking - Unitless integer from Photoshop's tracking field.
+@mixin tracking($tracking) {
+  letter-spacing: $tracking / 1000 * 1em;
+}
+
+// leading($tracking)
+//
+// Set all of he standard typography properties.
+//
+// $size - Unitless pixel value of the desired font-size.
+// $line-height - Unitless Pixel value of expected line-height.
+// $weight - Value of desired font-weight. The prefered method is to use
+//           the standeard unitless integers for font-weight.
+// $tracking - Unitless integer from Photoshop's tracking field.
+@mixin type($size, $leading, $weight, $tracking: null) {
+  @include font-size($size);
+  @include leading($leading, $size);
+  font-weight: $weight;
+  @if $tracking != null {
+    @include tracking($tracking);
+  }
+}

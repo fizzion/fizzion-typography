@@ -1,0 +1,103 @@
+@import '../lib/type-setting';
+
+@include test-module('Type Setting') {
+  @include test('Font-size [mixin]') {
+    @include assert('Return `font-size: 1rem`, when given 16') {
+      @include input {
+        @include font-size(16);
+      }
+
+      @include expect {
+        font-size: 1rem;
+      }
+    }
+
+    @include assert('Return `font-size: 1.4375rem`, when given 23') {
+      @include input {
+        @include font-size(23);
+      }
+
+      @include expect {
+        font-size: 1.4375rem;
+      }
+    }
+  }
+
+  @include test('Leading [mixin]') {
+    @include assert('Given a line height and font-size, ' +
+        'return line-height with a unitless float') {
+      @include input {
+        @include leading(21, 16);
+      }
+
+      @include expect {
+        line-height: 1.3125;
+      }
+    }
+
+    @include assert('Given a the same line height and font-size, ' +
+        'return line-height: 1;') {
+      @include input {
+        @include leading(16, 16);
+      }
+
+      @include expect {
+        line-height: 1;
+      }
+    }
+  }
+
+  @include test('Tracking [mixin]') {
+    @include assert( 'Given a positive integer, ' +
+        'return a positve floating point letter-spacing') {
+      @include input {
+        @include tracking(25)
+      }
+
+      @include expect {
+        letter-spacing: 0.025em;
+      }
+    }
+  }
+
+  @include test('Tracking [mixin]') {
+    @include assert( 'Given a negative integer, ' +
+        'return a negative floating point letter-spacing') {
+      @include input {
+        @include tracking(-125)
+      }
+
+      @include expect {
+        letter-spacing: -0.125em;
+      }
+    }
+  }
+
+  @include test('Type [mixin]') {
+    @include assert('Given intergers for size, leading, nd weight, tracking' +
+        'font-size, line-height, font-weight, and letter-spacing.') {
+      @include input {
+        @include type(14, 16, 700, -125);
+      }
+
+      @include expect {
+        font-size: 0.875rem;
+        line-height: 1.14286;
+        font-weight: 700;
+        letter-spacing: -0.125em;
+      }
+    }
+
+    @include assert('Tracking is optional and shouldn\'t appear if 0') {
+      @include input {
+        @include type(14, 16, 700);
+      }
+
+      @include expect {
+        font-size: 0.875rem;
+        line-height: 1.14286;
+        font-weight: 700;
+      }
+    }
+  }
+}
