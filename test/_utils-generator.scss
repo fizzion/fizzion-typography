@@ -3,10 +3,11 @@
 @include test-module('Generate typography utility classes') {
   @include test('Generate a list of selectors and their blocks [mixin]') {
     @include assert('Given a map with selectors as keys and a map as the ' +
-        'value, return a list of selectors [mixin]') {
+        'value, return a list of selectors.') {
       @include input {
         $typograpy-style: (
-          centi: (item: null)
+          centi: (item: null),
+          milli: (item: null)
         );
 
         @include get-type($typograpy-style);
@@ -14,6 +15,10 @@
 
       @include expect {
         .t-centi {
+          stuff: blah;
+        }
+
+        .t-milli {
           stuff: blah;
         }
       }
