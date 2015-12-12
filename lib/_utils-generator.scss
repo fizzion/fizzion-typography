@@ -1,11 +1,20 @@
-$typograpy-set: (
+@import 'type-setting';
+
+$typography-set: (
   centi: (item: null)
 ) !default;
 
 @mixin get-type($type-map: $typography-set) {
   @each $selector, $props in $type-map {
+    $tracking: null !default;
+
+    @if map-has-key($props, tracking) {
+      $tracking: map-get($props, tracking);
+    }
+
     .t-#{$selector} {
-      stuff: blah;
+      @include type(map-get($props, font-size), map-get($props, leading),
+          map-get($props, weight), $tracking);
     }
   }
 }
