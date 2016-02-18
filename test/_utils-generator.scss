@@ -1,0 +1,32 @@
+@import '../lib/utils-generator';
+
+@include test-module('Generate typography utility classes') {
+  @include test('Generate typography utility classes [mixin]') {
+    @include assert('Given a map of identifires and properties, generate ' +
+        'a list of typography utility classes.') {
+      @include input {
+        $typography-style: (
+          centi: (font-size: 14, leading: 18, weight: 400),
+          milli: (font-size: 12, leading: 18, weight: 700, tracking: -125)
+        );
+
+        @include get-type($typography-style);
+      }
+
+      @include expect {
+        .t-centi {
+          font-size: 0.875rem;
+          line-height: 1.28571;
+          font-weight: 700;
+        }
+
+        .t-milli {
+          font-size: 0.75rem;
+          line-height: 1.5;
+          font-weight: 700;
+          letter-spacing: -0.125em;
+        }
+      }
+    }
+  }
+}
