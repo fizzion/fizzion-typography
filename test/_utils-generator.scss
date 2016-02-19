@@ -36,7 +36,7 @@
     @include assert('Give a map and a key, return the styling the key') {
       @include input {
         $typography-style: (
-          peta: (font-size: 72, leading: 90, weight: 400),
+          peta: (font-size: 72, leading: 90, weight: 700),
           centi: (font-size: 14, leading: 18, weight: 400),
           milli: (font-size: 12, leading: 18, weight: 700, tracking: -125)
         );
