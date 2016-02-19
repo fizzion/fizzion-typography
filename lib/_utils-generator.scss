@@ -18,3 +18,6 @@ $typography-set: (
     }
   }
 }
+
+@mixin get-style($key, $type-map: $typography-set) {
+}
