@@ -18,3 +18,21 @@ $typography-set: (
     }
   }
 }
+
+@mixin get-style($key, $type-map: $typography-set) {
+  $styles: null !default;
+  $tracking: null !default;
+
+  @if map-has-key($type-map, $key) {
+    $styles: map-get($type-map, $key);
+
+    @if map-has-key($styles, tracking) {
+      $tracking: map-get($props, tracking);
+    }
+
+    @include type(map-get($styles, font-size), map-get($styles, leading),
+        map-get($styles, weight), $tracking);
+  } @else {
+    @error "$key doesn't exist, was #{$key}";
+  }
+}
