@@ -1,6 +1,6 @@
 {
   "name": "fizzion-typography",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "Typography utility classes for Fizzion",
   "main": "main.scss",
   "style": "main.scss",
@@ -9,7 +9,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git://github.com/necolas/normalize.css.git"
+    "url": "git@github.com:fizzion/fizzion-typography.git"
   },
   "keywords": [
     "fizzion",
