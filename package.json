@@ -2,7 +2,8 @@
   "name": "fizzion-typography",
   "version": "0.1.0",
   "description": "Typography utility classes for Fizzion",
-  "main": "_typography.scss",
+  "main": "main.scss",
+  "style": "main.scss",
   "scripts": {
     "test": "mocha --reporter spec"
   },
