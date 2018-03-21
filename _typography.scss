@@ -1,1 +1,10 @@
-$example: true;
+/*!
+ * Fizzion Typography v0.1.0
+ * Copyright 2015-2018 Alex Lemanski
+ * Licensed under MIT
+ *   (https://github.com/fizzion/fizzion-typography/blob/master/LICENSE.md)
+ */
+
+@import 'lib/sizing';
+@import 'lib/type-setting';
+@import 'lib/utils-generator';
