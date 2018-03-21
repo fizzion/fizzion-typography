@@ -4,7 +4,7 @@
   @include test('Generate typography utility classes [mixin]') {
     @include assert('Given a map of identifires and properties, generate ' +
         'a list of typography utility classes.') {
-      @include input {
+      @include output {
         $typography-style: (
           centi: (font-size: 14, leading: 18, weight: 400),
           milli: (font-size: 12, leading: 18, weight: 700, tracking: -125)
@@ -17,7 +17,7 @@
         .t-centi {
           font-size: 0.875rem;
           line-height: 1.28571;
-          font-weight: 700;
+          font-weight: 400;
         }
 
         .t-milli {
@@ -34,7 +34,7 @@
 @include test-module('Fetch Style from typograpy map') {
   @include test('Fetch style from map based on key [mixin]') {
     @include assert('Give a map and a key, return the styling the key') {
-      @include input {
+      @include output {
         $typography-style: (
           peta: (font-size: 72, leading: 90, weight: 700),
           centi: (font-size: 14, leading: 18, weight: 400),
