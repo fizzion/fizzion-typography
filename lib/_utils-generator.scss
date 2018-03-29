@@ -1,8 +1,6 @@
 @import 'type-setting';
 
-$typography-set: (
-  centi: (item: null)
-) !default;
+$typography-set: (centi: (item: null)) !default;
 
 @mixin get-type($type-map: $typography-set) {
   @each $selector, $props in $type-map {
@@ -27,7 +25,7 @@ $typography-set: (
     $styles: map-get($type-map, $key);
 
     @if map-has-key($styles, tracking) {
-      $tracking: map-get($props, tracking);
+      $tracking: map-get($styles, tracking);
     }
 
     @include type(map-get($styles, font-size), map-get($styles, leading),
