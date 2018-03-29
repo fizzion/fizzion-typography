@@ -55,4 +55,29 @@
       }
     }
   }
+
+  @include test('Fetch style from map based on key with tracking [mixin]') {
+    @include assert('Give a map that includes tracking and a key, return the styling the key') {
+      @include output {
+        $typography-style: (
+          peta: (font-size: 72, leading: 90, weight: 700),
+          centi: (font-size: 14, leading: 18, weight: 400),
+          milli: (font-size: 12, leading: 18, weight: 700, tracking: -125)
+        );
+
+        .header {
+          @include get-style(milli, $typography-style);
+        }
+      }
+
+      @include expect {
+        .header {
+          font-size: 0.75rem;
+          line-height: 1.5;
+          font-weight: 700;
+          letter-spacing: -0.125em;
+        }
+      }
+    }
+  }
 }
