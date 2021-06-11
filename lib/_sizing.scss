@@ -1,3 +1,5 @@
+@use 'sass:math';
+
 $base-font-size: 16 !default;
 
 // rem($pixel-equivalent)
@@ -6,5 +8,5 @@ $base-font-size: 16 !default;
 //
 // $pixel-equivalent - Pixel value passed in as a unitless value.
 @function rem($pixel-equivalent) {
-  @return $pixel-equivalent / $base-font-size * 1.0rem;
+  @return math.div($pixel-equivalent, $base-font-size) * 1.0rem;
 }

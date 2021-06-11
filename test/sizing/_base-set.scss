@@ -21,16 +21,16 @@ $base-font-size: 14;
 @include test-module('Test rem function with percision') {
   @include test('Given 16, rem conversion returns rem [function]') {
     $test: rem(16);
-    $expect: '1.14286rem';
+    $expect: '1.1428571429rem';
     @include assert-equal('#{$test}', '#{$expect}',
-        'returns value of 1.14286rem');
+        'returns value of 1.1428571429rem');
   }
 
   @include test('Given 12, rem conversion returns rem [function]') {
     $test: rem(12);
-    $expect: 0.85714rem;
+    $expect: 0.8571428571rem;
     @include assert-equal('#{$test}', '#{$expect}',
-        'returns value of 0.85714rem');
+        'returns value of 0.8571428571rem');
   }
 }
 
